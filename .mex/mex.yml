@@ -1,0 +1,51 @@
+# mex — drift detection for commercialvehicle.ai hive
+# mex (theDakshJaitly) — zero-AI, 8 checkers, 60% token reduction
+# See: https://github.com/theDakshJaitly/mex
+#
+# Run locally:  mex check
+# In CI:        fail build if score < 90
+
+version: 1
+hive: commercialvehicle.ai
+fail_under: 90
+
+scoring:
+  start: 100
+  deductions:
+    error: 10
+    warning: 3
+    info: 1
+
+checkers:
+  - name: code_doc_sync
+    type: builtin
+    paths: ["{*.py,*.md}"]
+  - name: imports_resolve
+    type: builtin
+    paths: ["{server.py,http_server.py,spawn.py}"]
+  - name: dead_links
+    type: builtin
+    paths: ["{*.md,*.yml,*.json}"]
+  - name: agent_card_valid
+    type: custom
+    script: scripts/check_agent_card.py
+    target: agent-card.json
+  - name: hermes_config_valid
+    type: custom
+    script: scripts/check_hermes.py
+    target: hermes.yml
+  - name: stack_yml_valid
+    type: builtin
+    target: stack.yml
+  - name: design_md_present
+    type: builtin
+    target: DESIGN.md
+  - name: no_secrets
+    type: builtin
+    patterns: ["*.pem", "*.key", "*credentials*"]
+
+ci:
+  enabled: true
+  on: [push, pull_request]
+  branch: main
+  fail_action: comment_and_block

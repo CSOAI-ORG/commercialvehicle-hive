@@ -1,0 +1,57 @@
+# commercialvehicle.ai — Hermes sub-context
+# Hermes (Nous Research) vv2026.6.5 — per-hive scope
+# See: https://github.com/NousResearch/hermes-agent
+
+hermes:
+  version: "v2026.6.5"
+  scope: "commercialvehicle.ai"
+
+  # MCP servers this sub-context can call
+  mcp_servers:
+    - name: "commercialvehicle-mcp"
+      transport: streamable_http
+      url: "http://localhost:8000/mcp"
+      tools: ["logistics-ai-mcp"]
+
+    # Shared MEOK governance MCPs (always available)
+    - name: csoai-governance-crosswalk-mcp
+      transport: streamable_http
+      url: "https://csoai-governance-crosswalk-mcp.example.com/mcp"
+    - name: councilof-agent-orchestrator-mcp
+      transport: streamable_http
+      url: "https://councilof.ai/mcp"
+
+  # A2A peer hives
+  a2a_peers:
+    # Cross-hive calls go via A2A Agent Card discovery
+    discovery_url: "/.well-known/agent-card.json"
+    allowed_peers:
+      # Filled per-hive based on real cross-hive revenue paths
+      - "compliance.meok.ai"
+      - "csoai.org"
+      - "proofof.ai"
+
+  models:
+    primary: kimi-k2.6          # reasoning
+    fast: deepseek-v3.5         # speed
+    private: local-llama3-8b    # PII / payments
+
+  memory:
+    type: agentmemory
+    mode: shared
+    scope: "commercialvehicle"
+
+  cron: []
+  # Per-hive cron entries (filled by L6 of stack.yml)
+
+  gateway:
+    telegram:
+      bot: "@commercialvehicle_ai_bot"
+    whatsapp:
+      number: "+44-NNN-NNN-NNN"  # replace per hive
+
+  safety:
+    max_tool_calls_per_request: 10
+    max_total_tokens: 100000
+    require_consent_for_a2a: true
+    log_to_memoria: true

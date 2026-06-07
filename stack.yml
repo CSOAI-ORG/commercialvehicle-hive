@@ -1,0 +1,82 @@
+# commercialvehicle.ai Hive — 7-layer config
+# Generated 2026-06-07 by gen-hive.py
+# Schema: meok-hive-architecture-2026-06-07 (memory file)
+
+hive:
+  domain: commercialvehicle.ai
+  tier: uk_construction
+  genesis: 2026-06-07
+  org: CSOAI-ORG
+  repo: commercialvehicle-hive
+
+layers:
+  L7_presentation:
+    type: open_design
+    palette: "fleet grey + route blue"
+    exports: [html, mp4, pdf, pptx]
+    hyperframes: true
+    hosting: vercel  # or cloudflare_pages
+
+  L6_orchestration:
+    type: hermes_sub
+    version: "v2026.6.5"
+    scope: "I am the commercialvehicle.ai assistant. I only call my own MCPs and
+            shared MEOK MCPs. I do NOT call other clusters unless via A2A
+            with explicit user consent."
+    models:
+      reasoning: kimi-k2.6
+      speed: deepseek-v3.5
+      privacy: local  # for PII / payments
+    gateway:
+      telegram: "@commercialvehicle_ai_bot"
+      whatsapp: "+44-NNN-NNN-NNN"  # replace per hive
+    cron:
+      - "0 9 * * 1"  # weekly digest
+      - "0 0 * * 0"  # weekly memoria backup
+
+  L5_domain_mcp:
+    type: fastmcp
+    mcp_version: "1.27.2"
+    transport: streamable_http
+    endpoint: /mcp
+    port: 8000
+    tools:
+    - logistics-ai-mcp
+    x402:
+      enabled: true
+      price_usd: "0.15"
+      free_tier: "1"
+
+  L4_agent_memory:
+    type: agentmemory
+    version: "v0.9.26"
+    mode: shared  # shared | isolated
+    recall_benchmark: 95.2%_R@5_LongMemEval-S
+    tiered: true
+    in_runtime: letta
+    long_term: agentmemory
+
+  L3_knowledge_graph:
+    type: cognee
+    scope: "UK commercial fleets, telematics, routing, TCO, driver hours (DTC)"
+    entities: ["vehicle", "route", "telemetry", "driver_hours", "fuel"]
+    relations: ["vehicle→route", "vehicle→telemetry", "driver_hours→vehicle"]
+    gossip_interval_min: 15
+    gossip_protocol: neo4j_streams
+
+  L2_versioned_history:
+    type: memoria
+    version: "v0.4.0"
+    namespace: "commercialvehicle"
+    branches: [main, "experiments/*", "prod-fixes/*"]
+    audit_by: councilof.ai
+
+  L1_drift_detection:
+    type: mex
+    fail_under: 90
+    scoring: |
+      score = 100
+      score -= 10 * errors
+      score -= 3  * warnings
+      score -= 1  * infos
+    ci_gate: true

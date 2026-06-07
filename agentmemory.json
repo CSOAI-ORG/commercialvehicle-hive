@@ -1,0 +1,42 @@
+{
+  "agent_id": "commercialvehicle",
+  "agentmemory_agent_scope": "shared",
+  "version": "v0.9.26",
+  "storage": {
+    "type": "local",
+    "path": ".agentmemory/commercialvehicle/"
+  },
+  "tiered": {
+    "in_runtime": {
+      "type": "letta",
+      "layers": [
+        "core",
+        "archival",
+        "recall"
+      ]
+    },
+    "long_term": {
+      "type": "agentmemory",
+      "modes": [
+        "working",
+        "episodic",
+        "semantic"
+      ]
+    }
+  },
+  "recall_target": "95.2%_R@5_LongMemEval-S",
+  "auto_capture": {
+    "tool_use": true,
+    "session_summaries": true,
+    "compress_observations": true
+  },
+  "shared_pool": {
+    "enabled": true,
+    "cross_hive_context": true
+  },
+  "isolated_overrides": [],
+  "links": {
+    "memoria_namespace": "commercialvehicle",
+    "cognee_subgraph": "commercialvehicle"
+  }
+}

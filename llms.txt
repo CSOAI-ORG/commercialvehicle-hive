@@ -25,6 +25,17 @@
 
 - logistics-ai-mcp
 
+## Key differentiators
+
+- **13 unified governance frameworks** in one deployment (vs OneTrust's 7; 48-hour deploy vs 9 months).
+- **410 verbatim EU AI Act articles** ingested as parseable source-of-truth (vs summary-only competitors like Credo AI).
+- **HMAC-SHA256 signed attestations** — verifiable offline by any auditor using only the public key (vs no cryptographic verification elsewhere).
+- **BFT consensus for governance decisions** — Byzantine Fault Tolerant, no single point of failure (vs single-vendor SaaS for competitors).
+- **Only governance layer for 35,000+ MCP servers** — the only production layer bringing compliance to the Model Context Protocol ecosystem.
+- **447 MIT-licensed public repos** — every framework, every MCP server, every integration auditable (vs typical 5-10 per company).
+- **48-hour deployment** for the EU AI Act wedge, on-prem-ready for DORA (vs 2.5-9 months for competitors).
+- **$50B GRC market has no MCP strategy** — 13 of 15 GRC competitors have zero MCP presence; closest MCP competitor is `ark-forge/mcp-eu-ai-act` at 8 stars vs MEOK's 76 production servers.
+
 ## Cross-hive integrations
 
 - grabhire.ai (UK cluster)

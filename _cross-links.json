@@ -1,0 +1,262 @@
+{
+  "_about": "Real cross-hive integration paths. NOT PBN. Each link has a justification.",
+  "links": [
+    {
+      "from": "meok.ai",
+      "to": [
+        "csoai.org",
+        "proofof.ai",
+        "councilof.ai"
+      ],
+      "reason": [
+        "customer's compliance portal",
+        "evidence layer",
+        "every customer action audited"
+      ]
+    },
+    {
+      "from": "csoai.org",
+      "to": [
+        "meok.ai",
+        "accountabilityof.ai",
+        "biasdetectionof.ai",
+        "dataprivacyof.ai",
+        "transparencyof.ai",
+        "councilof.ai",
+        "proofof.ai"
+      ],
+      "reason": [
+        "B2B customer login",
+        "AI Act Article 12 logging",
+        "EU AI Act Article 10",
+        "Article 30 records",
+        "Article 13 transparency",
+        "multi-stakeholder audit",
+        "signed compliance evidence"
+      ]
+    },
+    {
+      "from": "proofof.ai",
+      "to": [
+        "csoai.org",
+        "meok.ai"
+      ],
+      "reason": [
+        "issuer of attestations",
+        "verify at /v/<cert_id>"
+      ]
+    },
+    {
+      "from": "cobolbridge.ai",
+      "to": [
+        "meok.ai"
+      ],
+      "reason": [
+        "modern COBOL clients' compliance stack"
+      ]
+    },
+    {
+      "from": "accountabilityof.ai",
+      "to": [
+        "csoai.org",
+        "ai-incident-reporting-mcp"
+      ],
+      "reason": [
+        "bundled governance",
+        "core tool"
+      ]
+    },
+    {
+      "from": "agisafe.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "linked safety research"
+      ]
+    },
+    {
+      "from": "asisecurity.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "bundled governance"
+      ]
+    },
+    {
+      "from": "biasdetectionof.ai",
+      "to": [
+        "dataprivacyof.ai",
+        "csoai.org"
+      ],
+      "reason": [
+        "Article 10 + Article 30 bundle",
+        "EU AI Act coverage"
+      ]
+    },
+    {
+      "from": "dataprivacyof.ai",
+      "to": [
+        "biasdetectionof.ai",
+        "accountabilityof.ai",
+        "csoai.org"
+      ],
+      "reason": [
+        "GDPR + AI Act package",
+        "audit trail + privacy",
+        "EU AI Act coverage"
+      ]
+    },
+    {
+      "from": "ethicalgovernanceof.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "redirect — same brand"
+      ]
+    },
+    {
+      "from": "safetyof.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "landing → suite"
+      ]
+    },
+    {
+      "from": "transparencyof.ai",
+      "to": [
+        "csoai.org",
+        "proofof.ai"
+      ],
+      "reason": [
+        "explainability ticket",
+        "sign + verify explanations"
+      ]
+    },
+    {
+      "from": "councilof.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "BFT deliberation backbone"
+      ]
+    },
+    {
+      "from": "grabhire.ai",
+      "to": [
+        "muckaway.ai",
+        "planthire.ai",
+        "commercialvehicle.ai"
+      ],
+      "reason": [
+        "UK haulage cluster",
+        "UK construction cluster",
+        "UK construction cluster"
+      ]
+    },
+    {
+      "from": "muckaway.ai",
+      "to": [
+        "grabhire.ai",
+        "planthire.ai",
+        "commercialvehicle.ai"
+      ],
+      "reason": [
+        "UK cluster",
+        "UK cluster",
+        "UK cluster"
+      ]
+    },
+    {
+      "from": "planthire.ai",
+      "to": [
+        "grabhire.ai",
+        "muckaway.ai",
+        "commercialvehicle.ai"
+      ],
+      "reason": [
+        "UK cluster",
+        "UK cluster",
+        "UK cluster"
+      ]
+    },
+    {
+      "from": "commercialvehicle.ai",
+      "to": [
+        "grabhire.ai",
+        "muckaway.ai"
+      ],
+      "reason": [
+        "UK cluster",
+        "UK cluster"
+      ]
+    },
+    {
+      "from": "landlaw.ai",
+      "to": [
+        "csoai.org"
+      ],
+      "reason": [
+        "compliance for property lawyers"
+      ]
+    },
+    {
+      "from": "fishkeeper.ai",
+      "to": [
+        "koikeeper.ai"
+      ],
+      "reason": [
+        "premium tier upgrade"
+      ]
+    },
+    {
+      "from": "koikeeper.ai",
+      "to": [
+        "fishkeeper.ai"
+      ],
+      "reason": [
+        "consumer base"
+      ]
+    },
+    {
+      "from": "openmoe.ai",
+      "to": [
+        "openMCP",
+        "meok.ai"
+      ],
+      "reason": [
+        "cross-post + score",
+        "production deployment"
+      ]
+    },
+    {
+      "from": "openMCP",
+      "to": [
+        "openmoe.ai",
+        "meok.ai"
+      ],
+      "reason": [
+        "audit target",
+        "audit target"
+      ]
+    },
+    {
+      "from": "meok-compliance-gateway",
+      "to": [
+        "csoai.org",
+        "proofof.ai",
+        "openmoe.ai"
+      ],
+      "reason": [
+        "wraps flagship MCPs",
+        "x402 receipts",
+        "BFT receipts via x402"
+      ]
+    }
+  ]
+}

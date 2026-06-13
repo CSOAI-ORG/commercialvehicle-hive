@@ -1,6 +1,35 @@
 # commercialvehicle.ai Hive — 7-layer config
 # Generated 2026-06-07 by gen-hive.py
 # Schema: meok-hive-architecture-2026-06-07 (memory file)
+# === MEOK CANONICAL FACTS (alignment 2026-06-12, ratified + live-verified) ===
+# All queens must hold these as ground truth. Domain-specific scope is BELOW this block.
+# FLEET: 381 package dirs · 295 LIVE on PyPI · 46 unpublished · 2,482 releases all-time.
+# DOWNLOADS: 186,208/last-30d · 98,230/last-7d (organic ≈ 14K/day; downloads ≠ buyers).
+# SCORECARD: fleet avg 84.6/100 · 82 pkgs ≥90 · 201 at 80-89 · 54 at 65-79 · 2 below 65.
+# REGISTRY: 294 UNIQUE CSOAI-ORG servers (paginate metadata.nextCursor; server.name nests).
+# GITHUB: 499 repos in CSOAI-ORG. LOCAL STASH: ~/mcp-servers = 218 dirs.
+# KING: VM meok-backend :8077 (systemd meok-king) — ACTIVE, 28 hives.
+# SOV3: :3101 (systemd sov3, gunicorn) — HEALTHY, 13,277 episodes, consciousness 0.788,
+# 91 agents, 6 NNs. ⚠️ VM disk 90% / mem 83%.
+# PRICING (ratified 2026-06-10, GBP, livemode acct MEOK AI LTD acct_1TLlEKQvIueK5Xpb):
+#   Free key 200 calls/day (POST proofof.ai/signup) · Starter £29 · Pro £199
+#   → https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t
+#   Enterprise £1,499 → https://buy.stripe.com/fZu5kF0xS8wy9wpeGY8k91s
+#   48h Assessment £4,950 one-time → https://buy.stripe.com/eVq6oJ3K49AC0ZTaqI8k91m
+#   Article 50 kit £999 · PAYG £0.05/call
+#   NIS2-DE £99 self-serve / £499 DFY · NIS2-NL £499 · DORA-BE £999
+# NEVER quote £79 (retired 2026-06-10) or any …8k90x/…8k83x link (dead accounts).
+# NEVER reference CSGA / James Castle / Terranova (severed).
+# DEADLINES: EU AI Act Art 50 — new systems 2 Aug 2026 · legacy generative 2 Dec 2026.
+# REVENUE REALITY: £0 balance · 0 subscriptions · 0 payments (3 Stripe customers are self-tests).
+# ATTESTATION: HMAC + Ed25519 co-signed certs, offline-verifiable at proofof.ai/pubkey, v1.2.0.
+# LIVE SURFACES (verified 2026-06-12): proofof.ai/health /sign /verify /openapi.json /pubkey → 200;
+# /signup (POST) → 200; scorecard/* → 200 (CTA live, £199 canon); meok.ai → 200; sovereign.meok.ai LIVE.
+# STANDING RULES: witness never principal · no "makes money" claims · clean-venv import gate ·
+# live Stripe = real money (Nick executes) · republish-only on PyPI · honesty over hype · no
+# self-issued Review/AggregateRating schema · one canon ladder · commit after every change.
+# === END MEOK CANONICAL FACTS ===
+
 
 hive:
   domain: commercialvehicle.ai

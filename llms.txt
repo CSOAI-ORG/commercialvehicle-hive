@@ -55,7 +55,7 @@
 
 ## Canonical research (dossier reified 2026-06-08)
 
-The following 15 docs back the differentiators and FAQ on this landing page. Sourced from `/tmp/kimi_dossier_v2/` (Kimi 8 Jun 2026) and reified into the keystone. All rubric-pass per `RUBRIC_EXTERNAL_COMMS.md` § 8. Full URLs: `https://github.com/CSOAI-ORG/meok-compliance-gateway/blob/main/<filename>`
+The following 16 docs back the differentiators and FAQ on this landing page. Sourced from `/tmp/kimi_dossier_v2/` (Kimi 8 Jun 2026) and reified into the keystone. All rubric-pass per `RUBRIC_EXTERNAL_COMMS.md` § 8. Full URLs: `https://github.com/CSOAI-ORG/meok-compliance-gateway/blob/main/<filename>`
 
 - **KEY_DIFFERENTIATORS.md** — 8 differentiators vs 15 GRC competitors (13 frameworks, 410 EU articles, HMAC-SHA256, BFT, 35K MCP governance, 447 MIT repos, 48-hr deploy, $50B no-MCP)
 - **COMPARE_MATRIX_15_COMPETITORS.md** — 15-competitor feature matrix with neutral positioning

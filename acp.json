@@ -1,0 +1,20 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "commercialvehicle",
+    "description": "UK commercial fleet optimisation (Samsara/Geotab competitor).",
+    "version": "0.1.0",
+    "provider": "CSOAI-ORG",
+    "interfaces": [
+      {
+        "type": "a2a",
+        "url": "https://commercialvehicle.ai"
+      }
+    ],
+    "capabilities": [
+      "logistics-ai-mcp",
+      "a2a-mesh",
+      "memoria-commit"
+    ]
+  }
+}

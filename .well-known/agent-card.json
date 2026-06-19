@@ -1,0 +1,61 @@
+{
+  "name": "commercialvehicle",
+  "description": "UK commercial fleet optimisation (Samsara/Geotab competitor).",
+  "url": "https://commercialvehicle.ai",
+  "version": "0.1.0",
+  "provider": {
+    "organization": "CSOAI-ORG",
+    "url": "https://csoai.org"
+  },
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "json"
+  ],
+  "skills": [
+    {
+      "id": "logistics-ai-mcp",
+      "name": "logistics-ai-mcp",
+      "description": "Tool: logistics-ai-mcp (part of commercialvehicle.ai hive L5)"
+    },
+    {
+      "id": "a2a-mesh",
+      "name": "Cross-hive A2A call",
+      "description": "Can call other MEOK hives via A2A (with user consent)"
+    },
+    {
+      "id": "memoria-commit",
+      "name": "Versioned memory commit",
+      "description": "Commits to memoria namespace 'commercialvehicle'"
+    }
+  ],
+  "securitySchemes": {
+    "oauth2": {
+      "type": "oauth2",
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://commercialvehicle.ai/oauth/authorize",
+          "tokenUrl": "https://commercialvehicle.ai/oauth/token",
+          "scopes": {
+            "read": "Read hive state",
+            "write": "Invoke tools (x402-metered)",
+            "audit": "Read audit trail"
+          }
+        }
+      }
+    }
+  },
+  "x402Pricing": {
+    "enabled": true,
+    "currency": "USD",
+    "amount": "0.15",
+    "freeCallsPerIPPerDay": "1"
+  }
+}
